@@ -10,6 +10,6 @@ namespace Amv.NPuzzle.Core
         }
 
         public IReadOnlyCollection<Board> Solution { get; }
-        public int Moves => Solution.Count;
+        public int Moves => Solution.Count - 1;
     }
 }

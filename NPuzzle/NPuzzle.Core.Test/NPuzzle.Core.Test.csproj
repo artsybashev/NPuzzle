@@ -11,6 +11,612 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="TestData\puzzle00.txt" />
+    <None Remove="TestData\puzzle01.txt" />
+    <None Remove="TestData\puzzle02.txt" />
+    <None Remove="TestData\puzzle03.txt" />
+    <None Remove="TestData\puzzle04.txt" />
+    <None Remove="TestData\puzzle05.txt" />
+    <None Remove="TestData\puzzle06.txt" />
+    <None Remove="TestData\puzzle07.txt" />
+    <None Remove="TestData\puzzle08.txt" />
+    <None Remove="TestData\puzzle09.txt" />
+    <None Remove="TestData\puzzle10.txt" />
+    <None Remove="TestData\puzzle11.txt" />
+    <None Remove="TestData\puzzle12.txt" />
+    <None Remove="TestData\puzzle13.txt" />
+    <None Remove="TestData\puzzle14.txt" />
+    <None Remove="TestData\puzzle15.txt" />
+    <None Remove="TestData\puzzle16.txt" />
+    <None Remove="TestData\puzzle17.txt" />
+    <None Remove="TestData\puzzle18.txt" />
+    <None Remove="TestData\puzzle19.txt" />
+    <None Remove="TestData\puzzle20.txt" />
+    <None Remove="TestData\puzzle21.txt" />
+    <None Remove="TestData\puzzle22.txt" />
+    <None Remove="TestData\puzzle23.txt" />
+    <None Remove="TestData\puzzle24.txt" />
+    <None Remove="TestData\puzzle25.txt" />
+    <None Remove="TestData\puzzle26.txt" />
+    <None Remove="TestData\puzzle27.txt" />
+    <None Remove="TestData\puzzle28.txt" />
+    <None Remove="TestData\puzzle29.txt" />
+    <None Remove="TestData\puzzle2x2-00.txt" />
+    <None Remove="TestData\puzzle2x2-01.txt" />
+    <None Remove="TestData\puzzle2x2-02.txt" />
+    <None Remove="TestData\puzzle2x2-03.txt" />
+    <None Remove="TestData\puzzle2x2-04.txt" />
+    <None Remove="TestData\puzzle2x2-05.txt" />
+    <None Remove="TestData\puzzle2x2-06.txt" />
+    <None Remove="TestData\puzzle2x2-unsolvable1.txt" />
+    <None Remove="TestData\puzzle2x2-unsolvable2.txt" />
+    <None Remove="TestData\puzzle2x2-unsolvable3.txt" />
+    <None Remove="TestData\puzzle30.txt" />
+    <None Remove="TestData\puzzle31.txt" />
+    <None Remove="TestData\puzzle32.txt" />
+    <None Remove="TestData\puzzle33.txt" />
+    <None Remove="TestData\puzzle34.txt" />
+    <None Remove="TestData\puzzle35.txt" />
+    <None Remove="TestData\puzzle36.txt" />
+    <None Remove="TestData\puzzle37.txt" />
+    <None Remove="TestData\puzzle38.txt" />
+    <None Remove="TestData\puzzle39.txt" />
+    <None Remove="TestData\puzzle3x3-00.txt" />
+    <None Remove="TestData\puzzle3x3-01.txt" />
+    <None Remove="TestData\puzzle3x3-02.txt" />
+    <None Remove="TestData\puzzle3x3-03.txt" />
+    <None Remove="TestData\puzzle3x3-04.txt" />
+    <None Remove="TestData\puzzle3x3-05.txt" />
+    <None Remove="TestData\puzzle3x3-06.txt" />
+    <None Remove="TestData\puzzle3x3-07.txt" />
+    <None Remove="TestData\puzzle3x3-08.txt" />
+    <None Remove="TestData\puzzle3x3-09.txt" />
+    <None Remove="TestData\puzzle3x3-10.txt" />
+    <None Remove="TestData\puzzle3x3-11.txt" />
+    <None Remove="TestData\puzzle3x3-12.txt" />
+    <None Remove="TestData\puzzle3x3-13.txt" />
+    <None Remove="TestData\puzzle3x3-14.txt" />
+    <None Remove="TestData\puzzle3x3-15.txt" />
+    <None Remove="TestData\puzzle3x3-16.txt" />
+    <None Remove="TestData\puzzle3x3-17.txt" />
+    <None Remove="TestData\puzzle3x3-18.txt" />
+    <None Remove="TestData\puzzle3x3-19.txt" />
+    <None Remove="TestData\puzzle3x3-20.txt" />
+    <None Remove="TestData\puzzle3x3-21.txt" />
+    <None Remove="TestData\puzzle3x3-22.txt" />
+    <None Remove="TestData\puzzle3x3-23.txt" />
+    <None Remove="TestData\puzzle3x3-24.txt" />
+    <None Remove="TestData\puzzle3x3-25.txt" />
+    <None Remove="TestData\puzzle3x3-26.txt" />
+    <None Remove="TestData\puzzle3x3-27.txt" />
+    <None Remove="TestData\puzzle3x3-28.txt" />
+    <None Remove="TestData\puzzle3x3-29.txt" />
+    <None Remove="TestData\puzzle3x3-30.txt" />
+    <None Remove="TestData\puzzle3x3-31.txt" />
+    <None Remove="TestData\puzzle3x3-unsolvable.txt" />
+    <None Remove="TestData\puzzle3x3-unsolvable1.txt" />
+    <None Remove="TestData\puzzle3x3-unsolvable2.txt" />
+    <None Remove="TestData\puzzle40.txt" />
+    <None Remove="TestData\puzzle41.txt" />
+    <None Remove="TestData\puzzle42.txt" />
+    <None Remove="TestData\puzzle43.txt" />
+    <None Remove="TestData\puzzle44.txt" />
+    <None Remove="TestData\puzzle45.txt" />
+    <None Remove="TestData\puzzle46.txt" />
+    <None Remove="TestData\puzzle47.txt" />
+    <None Remove="TestData\puzzle48.txt" />
+    <None Remove="TestData\puzzle49.txt" />
+    <None Remove="TestData\puzzle4x4-00.txt" />
+    <None Remove="TestData\puzzle4x4-01.txt" />
+    <None Remove="TestData\puzzle4x4-02.txt" />
+    <None Remove="TestData\puzzle4x4-03.txt" />
+    <None Remove="TestData\puzzle4x4-04.txt" />
+    <None Remove="TestData\puzzle4x4-05.txt" />
+    <None Remove="TestData\puzzle4x4-06.txt" />
+    <None Remove="TestData\puzzle4x4-07.txt" />
+    <None Remove="TestData\puzzle4x4-08.txt" />
+    <None Remove="TestData\puzzle4x4-09.txt" />
+    <None Remove="TestData\puzzle4x4-10.txt" />
+    <None Remove="TestData\puzzle4x4-11.txt" />
+    <None Remove="TestData\puzzle4x4-12.txt" />
+    <None Remove="TestData\puzzle4x4-13.txt" />
+    <None Remove="TestData\puzzle4x4-14.txt" />
+    <None Remove="TestData\puzzle4x4-15.txt" />
+    <None Remove="TestData\puzzle4x4-16.txt" />
+    <None Remove="TestData\puzzle4x4-17.txt" />
+    <None Remove="TestData\puzzle4x4-18.txt" />
+    <None Remove="TestData\puzzle4x4-19.txt" />
+    <None Remove="TestData\puzzle4x4-20.txt" />
+    <None Remove="TestData\puzzle4x4-21.txt" />
+    <None Remove="TestData\puzzle4x4-22.txt" />
+    <None Remove="TestData\puzzle4x4-23.txt" />
+    <None Remove="TestData\puzzle4x4-24.txt" />
+    <None Remove="TestData\puzzle4x4-25.txt" />
+    <None Remove="TestData\puzzle4x4-26.txt" />
+    <None Remove="TestData\puzzle4x4-27.txt" />
+    <None Remove="TestData\puzzle4x4-28.txt" />
+    <None Remove="TestData\puzzle4x4-29.txt" />
+    <None Remove="TestData\puzzle4x4-30.txt" />
+    <None Remove="TestData\puzzle4x4-31.txt" />
+    <None Remove="TestData\puzzle4x4-32.txt" />
+    <None Remove="TestData\puzzle4x4-33.txt" />
+    <None Remove="TestData\puzzle4x4-34.txt" />
+    <None Remove="TestData\puzzle4x4-35.txt" />
+    <None Remove="TestData\puzzle4x4-36.txt" />
+    <None Remove="TestData\puzzle4x4-37.txt" />
+    <None Remove="TestData\puzzle4x4-38.txt" />
+    <None Remove="TestData\puzzle4x4-39.txt" />
+    <None Remove="TestData\puzzle4x4-40.txt" />
+    <None Remove="TestData\puzzle4x4-41.txt" />
+    <None Remove="TestData\puzzle4x4-42.txt" />
+    <None Remove="TestData\puzzle4x4-43.txt" />
+    <None Remove="TestData\puzzle4x4-44.txt" />
+    <None Remove="TestData\puzzle4x4-45.txt" />
+    <None Remove="TestData\puzzle4x4-46.txt" />
+    <None Remove="TestData\puzzle4x4-47.txt" />
+    <None Remove="TestData\puzzle4x4-48.txt" />
+    <None Remove="TestData\puzzle4x4-49.txt" />
+    <None Remove="TestData\puzzle4x4-50.txt" />
+    <None Remove="TestData\puzzle4x4-78.txt" />
+    <None Remove="TestData\puzzle4x4-80.txt" />
+    <None Remove="TestData\puzzle4x4-unsolvable.txt" />
+    <None Remove="TestData\puzzle50.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="TestData\puzzle00.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle01.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle02.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle03.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle04.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle05.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle06.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle07.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle08.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle09.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle10.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle11.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle12.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle13.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle14.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle15.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle16.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle17.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle18.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle19.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle20.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle21.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle22.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle23.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle24.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle25.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle26.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle27.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle28.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle29.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle2x2-00.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle2x2-01.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle2x2-02.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle2x2-03.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle2x2-04.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle2x2-05.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle2x2-06.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle2x2-unsolvable1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle2x2-unsolvable2.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle2x2-unsolvable3.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle30.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle31.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle32.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle33.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle34.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle35.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle36.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle37.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle38.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle39.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-00.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-01.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-02.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-03.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-04.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-05.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-06.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-07.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-08.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-09.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-10.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-11.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-12.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-13.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-14.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-15.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-16.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-17.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-18.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-19.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-20.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-21.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-22.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-23.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-24.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-25.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-26.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-27.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-28.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-29.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-30.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-31.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-unsolvable.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-unsolvable1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle3x3-unsolvable2.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle40.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle41.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle42.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle43.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle44.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle45.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle46.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle47.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle48.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle49.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-00.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-01.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-02.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-03.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-04.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-05.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-06.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-07.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-08.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-09.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-10.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-11.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-12.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-13.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-14.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-15.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-16.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-17.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-18.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-19.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-20.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-21.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-22.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-23.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-24.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-25.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-26.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-27.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-28.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-29.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-30.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-31.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-32.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-33.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-34.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-35.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-36.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-37.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-38.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-39.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-40.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-41.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-42.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-43.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-44.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-45.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-46.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-47.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-48.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-49.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-50.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-78.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-80.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle4x4-unsolvable.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\puzzle50.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.3.0-preview-20170628-02" />
     <PackageReference Include="xunit" Version="2.2.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0" />

@@ -64,7 +64,7 @@ namespace Amv.NPuzzle.Core
             {
                 if (child.IsGoal)
                 {
-                    result = GetResult(node);
+                    result = GetResult(child);
                     break;
                 }
 
@@ -108,7 +108,7 @@ namespace Amv.NPuzzle.Core
             SolutionNode currentNode = node;
             for (int i = 0; i < moves; i++)
             {
-                boards[i] = currentNode.Board;
+                boards[moves-i-1] = currentNode.Board;
                 currentNode = currentNode.Parent;
             }
 
