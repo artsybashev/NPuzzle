@@ -8,8 +8,8 @@ namespace Amv.NPuzzle.Core
         public SolutionNode(Board board, int manhattan, int hamming, int step, SolutionNode parent=null)
         {
             Board = board;
-            Manhattan = manhattan;
-            Hamming = hamming;
+            Priority0 = manhattan;
+            Priority1 = hamming;
             Step = step;
             Parent = parent;
         }
@@ -21,17 +21,17 @@ namespace Amv.NPuzzle.Core
         /// <summary>
         /// Number of blocks out of place
         /// </summary>
-        public int Hamming { get; }
+        public int Priority1 { get; }
 
         /// <summary>
-        /// Sum of Manhattan distances between blocks and goal
+        /// Sum of Priority0 distances between blocks and goal
         /// </summary>
-        public int Manhattan { get; }
+        public int Priority0 { get; }
 
         /// <summary>
         /// Is this board the goal board?
         /// </summary>
-        public bool IsGoal => Manhattan == 0;
+        public bool IsGoal => Priority0 == 0;
 
         public int Step { get; }
     }

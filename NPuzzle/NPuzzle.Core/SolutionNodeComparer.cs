@@ -15,12 +15,17 @@ namespace Amv.NPuzzle.Core
                 return 1;
             }
 
-            int result = x.Manhattan + x.Step - y.Manhattan - y.Step;
+            int result = x.Priority0 + x.Step - y.Priority0 - y.Step;
             if (result == 0)
             {
-                result = x.Hamming + x.Step - y.Hamming - y.Step;
+                result = x.Priority1 + x.Step - y.Priority1 - y.Step;
             }
+            /*int result = x.Priority0 + x.Priority1 - y.Priority0 - y.Priority1;
+            if (result == 0)
+            {
+                result = x.Step - y.Step;
+            }*/
             return result;
-        }
-    }
+}
+}
 }

@@ -1,40 +1,41 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
-using Xunit;
+using FluentAssertions;
+using NUnit;
+using NUnit.Framework;
 
 namespace Amv.NPuzzle.Core.Test
 {
+    [TestFixture]
     public class PuzzleSolverTest
     {
-        [Fact]
-        public void Test()
-        {
-            var target = Board.GetClassicalGoal(4);
-            var source = new Board(new short[,]
-            {
-                {5, 1, 3, 2},
-                {10, 6, 15, 7},
-                {9, 8, 11, 4},
-                {0, 13, 14, 12}
-            });
-            var solver = new PuzzleSolver(source, target);
-            var result = solver.Solve();
-            
-            Assert.NotNull(result);
-        }
-
-        [Theory]
-        [MemberData(nameof(BoardData.TestBoards), MemberType = typeof(BoardData))]
+        [Test]
+        [TestCaseSource(typeof(BoardData), nameof(BoardData.TestBoards))]
         public void SolveGivenBoard(BoardTestDataFile file)
         {
             var data = file.Data;
             var solver = new PuzzleSolver(data.Source, data.Target);
+
+            Assert.AreEqual(data.IsSolvable,solver.IsSolvable);
+
             var result = solver.Solve();
 
-            Assert.Equal(data.IsSolvable, solver.IsSolvable);
-            Assert.NotNull(result);
-            Assert.Equal(data.Moves, result.Moves);
+            result.Should().NotBeNull();
+            if (data.IsSolvable)
+            {
+                data.Moves.Should().Be(data.Moves);
+                result.IsSolvable.Should().BeTrue();
+                result.Solution.First().Should().Be(data.Source);
+                result.Solution.Last().Should().Be(data.Target);
+                result.Solution.Count.Should().Be(data.Moves+1);
+            }
+            else
+            {
+                result.Moves.Should().Be(0);
+                result.IsSolvable.Should().BeFalse();
+            }
         }
     }
 }

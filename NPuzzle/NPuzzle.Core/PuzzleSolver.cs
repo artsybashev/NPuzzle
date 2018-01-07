@@ -8,12 +8,15 @@ namespace Amv.NPuzzle.Core
 {
     public class PuzzleSolver
     {
-        private static readonly IManhattenCalculator ManhattenCalculator = new ManhattenCalculator();
-        private static readonly IHammingCalculator HammingCalculator = new HammingCalculator();
+        private readonly IHeurisiticCalculator _manhattenCalculator;
+        private readonly IHeurisiticCalculator _hammingCalculator;
+        private readonly IHeurisiticCalculator _liniarConflictsCalculator;
+        private static readonly IHeurisiticCalculator InversionCalculator = new InversionCalculator();
         private static readonly IComparer<SolutionNode> SolutionNodeComparer = new SolutionNodeComparer();
 
         private readonly Board _initialBoard;
-        private (short Row, short Col)[] _targetBoardMap;
+        private readonly (short Row, short Col)[] _targetBoardMap;
+        private readonly Lazy<bool> _isSolvable;
 
         public PuzzleSolver(Board initialBoard, Board targetBoard)
         {
@@ -22,19 +25,46 @@ namespace Amv.NPuzzle.Core
 
             _initialBoard = initialBoard;
             _targetBoardMap=targetBoard.GetMap();
+            _manhattenCalculator = new ManhattenCalculator(_targetBoardMap);
+            _hammingCalculator = new HammingCalculator(_targetBoardMap);
+            _liniarConflictsCalculator = new LinearConflictCalculator(_targetBoardMap);
 
-            var n =_initialBoard.Dimension;
+            _isSolvable = new Lazy<bool>(IsSolvableInternal);
         }
 
-        public bool IsSolvable
+        public bool IsSolvable => _isSolvable.Value;
+
+        private bool IsSolvableInternal()
         {
-            get { return true; }
+            short n = _initialBoard.Dimension;
+            var inversions = InversionCalculator.Calculate(_initialBoard.Cells);
+
+            if (_initialBoard.Dimension % 2 == 1)
+            {
+                return inversions % 2 == 0;
+            }
+
+            short zeroPos = 0;
+            for (short i = (short)(n - 1); i >= 0; i--)
+                for (short j = (short)(n - 1); j >= 0; j--)
+                    if (_initialBoard.Cells[i,j] == 0)
+                        zeroPos = (short)(n - i);
+
+            return zeroPos%2 != inversions % 2;
         }
 
         public PuzzleResult Solve()
         {
+            if(!IsSolvable)
+                return PuzzleResult.Unsolvable;
+
             var queue = new PriorityQueue<SolutionNode>(11, SolutionNodeComparer);
             var initial = CreateNode(_initialBoard, 0);
+            if (initial.IsGoal)
+            {
+                return GetResult(initial);
+            }
+
             queue.Enqueue(initial);
 
             var result = ProcessQueue(queue);
@@ -46,7 +76,7 @@ namespace Amv.NPuzzle.Core
         {
             int i = 0;
             PuzzleResult result = null;
-            while (queue.Count > 0 && result == null && i < 5000000)
+            while (queue.Count > 0 && result == null && i < 15000000)
             {
                 result = ProcessQueueItem(queue);
 
@@ -77,9 +107,9 @@ namespace Amv.NPuzzle.Core
         private SolutionNode CreateNode(Board board, int step)
         {
             return new SolutionNode(board, 
-                ManhattenCalculator.GetManhattan(board.Cells, _targetBoardMap),
-                HammingCalculator.Calculate(board.Cells, _targetBoardMap),
-                0);
+                _manhattenCalculator.Calculate(board.Cells)+_liniarConflictsCalculator.Calculate(board.Cells),
+                _hammingCalculator.Calculate(board.Cells),
+                step);
         }
 
         public IEnumerable<SolutionNode> GetChildrenNodes(SolutionNode source)
@@ -94,8 +124,8 @@ namespace Amv.NPuzzle.Core
                     continue;
                 }
                 yield return new SolutionNode(neighbor,
-                    ManhattenCalculator.GetManhattan(neighbor.Cells, _targetBoardMap),
-                    HammingCalculator.Calculate(neighbor.Cells, _targetBoardMap),
+                    _manhattenCalculator.Calculate(neighbor.Cells) + _liniarConflictsCalculator.Calculate(neighbor.Cells),
+                    _hammingCalculator.Calculate(neighbor.Cells),
                     source.Step+1,
                     source);
             }

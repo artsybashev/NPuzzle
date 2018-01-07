@@ -2,9 +2,16 @@
 
 namespace Amv.NPuzzle.Core
 {
-    public class HammingCalculator : IHammingCalculator
+    public class HammingCalculator : IHeurisiticCalculator
     {
-        public int Calculate(short[,] board, (short Row, short Col)[] targetBoardMap)
+        private readonly (short Row, short Col)[] _targetBoardMap;
+
+        public HammingCalculator((short Row, short Col)[] targetBoardMap)
+        {
+            _targetBoardMap = targetBoardMap;
+        }
+
+        public int Calculate(short[,] board)
         {
             int n = board.GetLength(0);
             int result = 0;
@@ -15,7 +22,7 @@ namespace Amv.NPuzzle.Core
                     var val = board[i, j];
                     if (val == 0)
                         continue;
-                    var targetPos = targetBoardMap[val];
+                    var targetPos = _targetBoardMap[val];
                     result += i == targetPos.Row && j == targetPos.Col ? 0 : 1;
                 }
             }

@@ -1,13 +1,17 @@
 ﻿using System;
-using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Amv.NPuzzle.Core
 {
-    public class ManhattenCalculator : IManhattenCalculator
+    public class ManhattenCalculator : IHeurisiticCalculator
     {
-        public int GetManhattan(short[,] board, (short Row, short Col)[] targetBoardMap)
+        private readonly (short Row, short Col)[] _targetBoardMap;
+
+        public ManhattenCalculator((short Row, short Col)[] targetBoardMap)
+        {
+            _targetBoardMap = targetBoardMap;
+        }
+
+        public int Calculate(short[,] board)
         {
             int n = board.GetLength(0);
             int result = 0;
@@ -18,26 +22,11 @@ namespace Amv.NPuzzle.Core
                     var val = board[i, j];
                     if(val==0)
                         continue;
-                    var targetPos = targetBoardMap[val];
+                    var targetPos = _targetBoardMap[val];
                     result += Math.Abs(i - targetPos.Row) + Math.Abs(j - targetPos.Col);
                 }
             }
             return result;
         }
-
-        private (short, short)[] GetTargetBoard(int dimmention)
-        {
-            var result = new ValueTuple<short, short>[dimmention * dimmention];
-            for (short i = 0; i < dimmention; i++)
-            {
-                for (short j = 0; j < dimmention; j++)
-                {
-                    result[i * dimmention + j] = (i, j);
-                }
-            }
-            return result;
-        }
     }
-
-
 }

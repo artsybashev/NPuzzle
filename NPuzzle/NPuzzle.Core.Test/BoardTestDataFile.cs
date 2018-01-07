@@ -1,13 +1,14 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-
+using System.Text.RegularExpressions;
 namespace Amv.NPuzzle.Core.Test
 {
     public class BoardTestDataFile
     {
         private readonly FileInfo _file;
         private readonly Lazy<BoardTestData> _data;
+        private static readonly Regex _filenameRegex = new Regex(@"^puzzle(\dx\d-){0,1}(?<moves>\d{2}|unsolvable\d{0,1}).txt$");
 
         public BoardTestDataFile(FileInfo file)
         {
@@ -26,6 +27,8 @@ namespace Amv.NPuzzle.Core.Test
         {
             var content = File.ReadAllText(_file.FullName).Split("\n");
 
+            var moves = GetMoves(_file.Name);
+
             short n = short.Parse(content[0]);
 
             var target = Board.GetClassicalGoal(n);
@@ -42,7 +45,23 @@ namespace Amv.NPuzzle.Core.Test
 
             var source = new Board(board);
 
-            return new BoardTestData(0, source, target, true);
+            return new BoardTestData(moves.Moves, source, target, moves.IsSolvable);
+        }
+
+        private (int Moves, bool IsSolvable) GetMoves(string fileName)
+        {
+            var result = _filenameRegex.Match(fileName);
+            if (result.Success)
+            {
+                if(result.Groups["moves"].Value.StartsWith("unsolvable"))
+                {
+                    return (Moves:0,IsSolvable:false);
+                }
+
+                return (Moves: int.Parse(result.Groups["moves"].Value), IsSolvable: true);
+            }
+            
+            throw new ArgumentException("Cannot parse moves from "+ fileName);
         }
     }
 }
